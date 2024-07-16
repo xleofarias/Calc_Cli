@@ -90,27 +90,31 @@ Escolha a operação:
 [2] Subtrair 
 [3] Mulplicar
 [4] Dividir
+[5] Sair:
 """))
                 if escolher == 1:
                     numero = float(input("Digite o número para somar com o histórico: "))
                     self.resultado += numero
                     print(f"{historico_resultado} + {numero} = {self.resultado}")
                     self.historico.append({'operacao': 'soma', 'resultado': self.resultado})             
-                if escolher == 2:
+                elif escolher == 2:
                     numero = float(input("Digite o número para subtrair com o histórico: "))
                     self.resultado -= numero
                     print(f"{historico_resultado} - {numero} = {self.resultado}")
                     self.historico.append({'operacao': 'subtração', 'resultado': self.resultado})
-                if escolher == 3:
+                elif escolher == 3:
                     numero = float(input("Digite o número para multiplicar com o histórico: "))
                     self.resultado *= numero
                     print(f"{historico_resultado} * {numero} = {self.resultado}")
                     self.historico.append({'operacao': 'multiplicação', 'resultado': self.resultado})
-                if escolher == 4:
+                elif escolher == 4:
                     numero = float(input("Digite o número para dividir com o histórico: "))
                     self.resultado /= numero
                     print(f"{historico_resultado} / {numero} = {self.resultado}")
                     self.historico.append({'operacao': 'divisão', 'resultado': self.resultado})
+                elif escolher == 5:
+                    print("Fechando calculdora...")
+                    exit()
                 input("Pressione [Enter] para continuar...")
             else:
                 print("Índice inválido.")
