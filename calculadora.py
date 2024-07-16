@@ -95,18 +95,22 @@ Escolha a operação:
                     numero = float(input("Digite o número para somar com o histórico: "))
                     self.resultado += numero
                     print(f"{historico_resultado} + {numero} = {self.resultado}")
+                    self.historico.append({'operacao': 'soma', 'resultado': self.resultado})             
                 if escolher == 2:
                     numero = float(input("Digite o número para subtrair com o histórico: "))
                     self.resultado -= numero
                     print(f"{historico_resultado} - {numero} = {self.resultado}")
+                    self.historico.append({'operacao': 'subtração', 'resultado': self.resultado})
                 if escolher == 3:
                     numero = float(input("Digite o número para multiplicar com o histórico: "))
                     self.resultado *= numero
                     print(f"{historico_resultado} * {numero} = {self.resultado}")
+                    self.historico.append({'operacao': 'multiplicação', 'resultado': self.resultado})
                 if escolher == 4:
                     numero = float(input("Digite o número para dividir com o histórico: "))
                     self.resultado /= numero
                     print(f"{historico_resultado} / {numero} = {self.resultado}")
+                    self.historico.append({'operacao': 'divisão', 'resultado': self.resultado})
                 input("Pressione [Enter] para continuar...")
             else:
                 print("Índice inválido.")
