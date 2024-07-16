@@ -83,6 +83,31 @@ Escolha a operação:
                 historico_resultado = self.historico[escolha]['resultado']
                 self.resultado = historico_resultado
                 print(f"Resultado selecionado do histórico: {self.resultado}")
+                escolher = int(input(
+"""
+Escolha a operação: 
+[1] Somar 
+[2] Subtrair 
+[3] Mulplicar
+[4] Dividir
+"""))
+                if escolher == 1:
+                    numero = float(input("Digite o número para somar com o histórico: "))
+                    self.resultado += numero
+                    print(f"{historico_resultado} + {numero} = {self.resultado}")
+                if escolher == 2:
+                    numero = float(input("Digite o número para subtrair com o histórico: "))
+                    self.resultado -= numero
+                    print(f"{historico_resultado} - {numero} = {self.resultado}")
+                if escolher == 3:
+                    numero = float(input("Digite o número para multiplicar com o histórico: "))
+                    self.resultado *= numero
+                    print(f"{historico_resultado} * {numero} = {self.resultado}")
+                if escolher == 4:
+                    numero = float(input("Digite o número para dividir com o histórico: "))
+                    self.resultado /= numero
+                    print(f"{historico_resultado} / {numero} = {self.resultado}")
+                input("Pressione [Enter] para continuar...")
             else:
                 print("Índice inválido.")
         except ValueError:
