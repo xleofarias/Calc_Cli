@@ -1,3 +1,5 @@
+import os
+
 class Calculadora:
     def __init__(self):
         self.resultado: float
@@ -140,24 +142,28 @@ Escolha a operação:
                 lista_numeros.append(numero)
         return lista_numeros
 
-calculadora1 = Calculadora()
+def main():
+    calculadora1 = Calculadora()
 
-print("*******MENU*******")
-while True:
-    calculadora1.escolher_operacao()
-    desc_operacao: str
-    if calculadora1.operacao == 1:
-        desc_operacao = "soma"
-    elif calculadora1.operacao == 2:
-        desc_operacao = "subtração"
-    elif calculadora1.operacao == 3:
-        desc_operacao = "multiplicação"
-    elif calculadora1.operacao == 4:
-        desc_operacao = "divisão"
-    elif calculadora1.operacao == 5:
-        continue
-    else:
-        break
+    print("*******MENU*******")
+    while True:
+        calculadora1.escolher_operacao()
+        desc_operacao: str
+        if calculadora1.operacao == 1:
+            desc_operacao = "soma"
+        elif calculadora1.operacao == 2:
+            desc_operacao = "subtração"
+        elif calculadora1.operacao == 3:
+            desc_operacao = "multiplicação"
+        elif calculadora1.operacao == 4:
+            desc_operacao = "divisão"
+        elif calculadora1.operacao == 5:
+            continue
+        else:
+            break
 
-    print(f"O resultado da {desc_operacao} é {calculadora1.resultado}")
-    input("Pressione [Enter] para continuar...")
+        print(f"O resultado da {desc_operacao} é {calculadora1.resultado}")
+        input("Pressione [Enter] para continuar...")
+
+if __name__ == "__main__":
+    main()
